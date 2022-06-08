@@ -42,7 +42,7 @@ export class Triangle extends Shape{
             this.side3 + this._side2 > this._side1;
     }
 
-    getArea():any{
+    getPerimeter():any{
         if (this.checkingTriangle()){
             return this._side1 + this._side2 + this._side3
         } else {
@@ -50,9 +50,9 @@ export class Triangle extends Shape{
         }
     }
 
-    getPerimeter():any{
+    getArea():any{
         if (this.checkingTriangle()){
-            let S = this.getArea()/2;
+            let S = this.getPerimeter()/2;
             return Math.sqrt(S*(S-this.side1)*(S-this.side2)*(S-this.side3))
         } else {
             return console.log("this is not the Triangle")

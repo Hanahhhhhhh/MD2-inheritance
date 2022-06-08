@@ -32,7 +32,7 @@ class Triangle extends shape_1.Shape {
             this.side1 + this._side3 > this._side2 &&
             this.side3 + this._side2 > this._side1;
     }
-    getArea() {
+    getPerimeter() {
         if (this.checkingTriangle()) {
             return this._side1 + this._side2 + this._side3;
         }
@@ -40,9 +40,9 @@ class Triangle extends shape_1.Shape {
             return console.log("this is not the Triangle");
         }
     }
-    getPerimeter() {
+    getArea() {
         if (this.checkingTriangle()) {
-            let S = this.getArea() / 2;
+            let S = this.getPerimeter() / 2;
             return Math.sqrt(S * (S - this.side1) * (S - this.side2) * (S - this.side3));
         }
         else {
